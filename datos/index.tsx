@@ -35,7 +35,7 @@ export const menuItems =  [
       titulo: 'contabilidad',
       ruta: '/panel/contabilidad',
       submenues: [
-        { subtitulo: 'usuarios', subruta: '/panel/contabilidad/movimientos',icon:<MdCoPresent /> },
+        { subtitulo: 'usuarios', subruta: '/panel/contabilidad/usuarios',icon:<MdCoPresent /> },
         { subtitulo: 'movimientos', subruta: '/panel/contabilidad/movimientos',icon:<MdFilterListAlt /> }
   
       ],
