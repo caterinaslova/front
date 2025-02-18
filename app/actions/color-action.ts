@@ -15,13 +15,13 @@ export const colorActionAgregar= async(mensajeria:RespuestaAction,formData:FormD
   
 
     if (!datosAenviar.success){
-     
+        console.log(datosAenviar)
         return{
             success:'',
             errors:datosAenviar.error.errors.map(error=>error.message)
         }
     }
-
+    console.log('mandé los datos')
     const url = `${process.env.API_URL}/colores`
 
     const req = await fetch(url,{
@@ -32,7 +32,8 @@ export const colorActionAgregar= async(mensajeria:RespuestaAction,formData:FormD
         body:JSON.stringify(datosAenviar.data)
     })
 
-    
+    console.log('obtuve respuesta')
+    console.log(req)
     const respuestaApi = RespuestaJsonDeApi.parse(await req.json())
 
     if (!req.ok){
