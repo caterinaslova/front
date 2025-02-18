@@ -1,0 +1,29 @@
+.container{
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+.container h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.link{
+    background: teal;
+    border-radius: 0.5rem;
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 0 10px white, 0 0 40px white;
+    transition: 0.5s;
+}
+.link:hover{
+    background-color: orange;
+    color:white;
+    box-shadow: 0 0 10px orange, 0 0 40px orange, 0 0 80px orange;
+}
+.img{
+    width: auto;
+    height: auto;
+}

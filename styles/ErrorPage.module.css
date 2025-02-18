@@ -1,0 +1,33 @@
+.container{
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+.container h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.boton{
+    background: teal;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.imagen{
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 1rem;
+ 
+}
+.boton:hover{
+    box-shadow: 0 0 10px white, 0 0 40px yellow, 0 0 80px orange;
+}
+.img{
+    width: auto;
+    height: auto;
+}
