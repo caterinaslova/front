@@ -90,7 +90,7 @@ export default function CategoriaForm({ tarea, categoria }: CategoriaFormProps) 
       }
       router.push('/panel/stock/categorias');
     }
-  }, [state,isSubmitSuccessful]);
+  }, [state]);
   useEffect(() => {
     if (isSubmitSuccessful && state.success) {
       reset();
@@ -202,8 +202,8 @@ export default function CategoriaForm({ tarea, categoria }: CategoriaFormProps) 
               hayFoto && (
                 <>
                 <div className="w-[150] h-[150] flex items-center justify-self-center">
-                <Image src={`${process.env.NEXT_PUBLIC_API_URL}/imagenes/${categoria?.carpetaFotos}/${categoria?.imagenCategoria}`} alt="nombre" width={150} height={150} priority className='object-cover w-auto h-auto rounded-md'/>
-
+                {/* <Image src={`${process.env.NEXT_PUBLIC_API_URL}/imagenes/${categoria?.carpetaFotos}/${categoria?.imagenCategoria}`} alt="nombre" width={150} height={150} priority className='object-cover w-auto h-auto rounded-md'/> */}
+                <img src="https://api.caterinaweb.website/imagenes/sillas-operativas/67b5328a9ce6dd3b8ee1e96f-alma.jpg" alt="prueba" />
                 </div>
                 </>
               )
