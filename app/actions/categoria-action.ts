@@ -32,7 +32,8 @@ export const categoriaActionAgregar= async(mensajeria:RespuestaAction,formData:F
     const req = await fetch(url,{
         method:'POST',
         headers:{
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            
         },
         body:JSON.stringify(datosAenviar.data)
     })

@@ -76,7 +76,7 @@ export default function CategoriaForm({ tarea, categoria }: CategoriaFormProps) 
   });
 
   const hayFoto = categoria?.imagenCategoria && categoria.imagenCategoria !== 'imagenvacia.jpg'  ? true : false
-
+  console.log('carpeta',categoria?.carpetaFotos)
   useEffect(() => {
     if (state.errors.length) {
      
@@ -172,7 +172,7 @@ export default function CategoriaForm({ tarea, categoria }: CategoriaFormProps) 
           <label htmlFor=''>Carpeta de las fotos:</label>
           <input
             type='text'
-            defaultValue={carpetaPropuesta.split(' ').join('-').toLowerCase()}
+            defaultValue={tarea === "agregar" ? carpetaPropuesta.split(' ').join('-').toLowerCase(): categoria?.carpetaFotos}
          
             {...register('carpetaFotos')}
             className={`p-3 border border-primary rounded-md ${tarea==="modificar" ?"bg-zinc-200 border-none dark:bg-zinc-800" : ""}`}
@@ -203,7 +203,7 @@ export default function CategoriaForm({ tarea, categoria }: CategoriaFormProps) 
                 <>
                 <div className="w-[150] h-[150] flex items-center justify-self-center">
                 {/* <Image src={`${process.env.NEXT_PUBLIC_API_URL}/imagenes/${categoria?.carpetaFotos}/${categoria?.imagenCategoria}`} alt="nombre" width={150} height={150} priority className='object-cover w-auto h-auto rounded-md'/> */}
-                <img src="https://api.caterinaweb.website/imagenes/sillas-operativas/67b5328a9ce6dd3b8ee1e96f-alma.jpg" alt="prueba" />
+                <Image src={`${process.env.NEXT_PUBLIC_API_URL}/imagenes/${categoria?.carpetaFotos}/${categoria?.imagenCategoria}`} priority alt="prueba" width={150} height={150} className='object-cover w-auto h-auto rounded-md'/>
                 </div>
                 </>
               )
@@ -213,7 +213,7 @@ export default function CategoriaForm({ tarea, categoria }: CategoriaFormProps) 
               !hayFoto && (
                 <>
                 <div className="w-[150] h-[150] flex items-center justify-self-center">
-                <Image src={`${process.env.NEXT_PUBLIC_API_URL}/imagenes/${categoria?.imagenCategoria}`} alt="nombre" width={150} height={150} priority className='object-cover w-auto h-auto rounded-md'/>
+                <Image src={`${process.env.NEXT_PUBLIC_API_URL}/imagenes/imagenvacia.jpg`} alt="nombre" width={150} height={150} priority className='object-cover w-auto h-auto rounded-md'/>
 
                 </div>
                 </>
